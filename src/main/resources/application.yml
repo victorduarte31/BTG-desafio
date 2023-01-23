@@ -1,0 +1,29 @@
+queue:
+  consumer: btg-consumer
+  dlq: btg-dlq
+exchange: btg-exchange
+exchange-dlx: btg-exchange-dlx
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  rabbitmq:
+    password: guest
+    username: guest
+    port: 5672
+    host: localhost
+    listener:
+      simple:
+        retry:
+          max-attempts: 3
+          enabled: true
+          initial-interval: 2000
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      username: root
+      password: root
+      database: btg_database
+      authentication-database: admin
