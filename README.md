@@ -18,6 +18,10 @@
 
 Atendendo os requisitos acima basta rodar o comando abaixo para subir as imagens no docker
 
+### Habilitando plugin Shovel
+
+- rabbitmq-plugins enable rabbitmq_shovel, **Executar dentro do terminal do rabbit**
+
 #### Subindo os containers
  - docker-compose up -d
 
