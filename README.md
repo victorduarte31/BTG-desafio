@@ -28,8 +28,36 @@ Atendendo os requisitos acima basta rodar o comando abaixo para subir as imagens
 #### Parar container
  - docker-compose stop
 
+#### Estrutura de mensagem aceita na requisição
 
+```json
+{
+  "codigoPedido":1001,
+  "codigoCliente":1,
+  "itens":[
+    {
+      "produto":"lápis",
+      "quantidade":100,
+      "preco":1.10
+    },
+    {
+      "produto":"caderno",
+      "quantidade":10,
+      "preco":1.00
+    }
+  ]
+}
+
+```
 
 ### Swagger
 
  - http://localhost:8080/swagger-ui/#/
+
+
+
+### Futuras melhorias
+
+- Realizar a quebra da aplicação em outros microservices ou criar libs para isolar as diferentes camadas permitindo assim uma melhor manuntenção
+- Realização de testes de stress
+- Utilização de BDD/TDD
